@@ -9,8 +9,8 @@ namespace HelloWorkBank.Models
         public string CPF { get; set; }
         public int NumeroConta { get; set; }
 
-        public ContaModel ContaModel { get; set; }
-        public GerenteModel GerenteModel { get; set; }
+        public ContaModel Conta { get; set; }
+        public GerenteModel Gerente { get; set; }
         public int IdConta { get; set; }
         public int IdGerente { get; set; }
 

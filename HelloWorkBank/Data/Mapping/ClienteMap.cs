@@ -52,11 +52,11 @@ namespace HelloWorkBank.Data.Mapping
                 .IsUnique();
           
 
-            builder.HasOne(x => x.ContaModel)
+            builder.HasOne(x => x.Conta)
                 .WithMany(x=>x.CLientes)
                 .HasConstraintName("FK_CLiente_Conta");
 
-            builder.HasOne(x => x.GerenteModel)
+            builder.HasOne(x => x.Gerente)
                 .WithMany(x=>x.Clientes)
                 .HasConstraintName("FK_CLiente_Gerente");
                 

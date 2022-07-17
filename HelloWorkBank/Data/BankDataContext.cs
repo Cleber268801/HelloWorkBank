@@ -1,4 +1,5 @@
-﻿using HelloWorkBank.Model;
+﻿using HelloWorkBank.Data.Mapping;
+using HelloWorkBank.Model;
 using HelloWorkBank.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,16 @@ namespace HelloWorkBank.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite("DataSource=app.db;Cache=Shared");
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ClienteMap());
+            modelBuilder.ApplyConfiguration(new GerenteMap());
+            modelBuilder.ApplyConfiguration(new ContaMap());
+
+        }
+
+
     }
 
 }
