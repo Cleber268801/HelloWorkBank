@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 namespace HelloWorkBank.Controllers
 {
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
